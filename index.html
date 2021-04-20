@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>BMI Calculator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="text/javascript" href="./script.js">
+    </head>
+    <body>
+        <div class='cursor'></div>
+        <div class="app">
+
+            <!-- Header -->
+
+            <div class="header">
+                <div class="header-menu">
+
+                    <!-- Header Icon -->
+                    <span>
+                        <img class="bmi-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIiBjbGFzcz0iIj48Zz48cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGQ9Im0xMi41IDE2Yy0uMzc5IDAtLjcyNS0uMjE0LS44OTUtLjU1M2wtMS43MjMtMy40NDdoLTEuODgyYy0uNTUyIDAtMS0uNDQ4LTEtMXMuNDQ4LTEgMS0xaDIuNWMuMzc5IDAgLjcyNS4yMTQuODk1LjU1M2wxLjEwNSAyLjIxMSAzLjEwNS02LjIxMWMuMTYtLjMxOS40NzctLjUyOS44MzMtLjU1MS4zNTYtLjAyMy42OTcuMTQ3Ljg5NC40NDNsMy43MDMgNS41NTVoMS45NjVjLjU1MiAwIDEgLjQ0OCAxIDFzLS40NDggMS0xIDFoLTIuNWMtLjMzNCAwLS42NDYtLjE2Ny0uODMyLS40NDVsLTMuMDQ0LTQuNTY2LTMuMjI5IDYuNDU5Yy0uMTcuMzM4LS41MTYuNTUyLS44OTUuNTUyeiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTE4LjAwNCAxNC42NjQtMS4xMzItMS42OTktMS42ODggMy4zNzZjLS41MTIgMS4wMjQtMS41NCAxLjY1OS0yLjY4NCAxLjY1OXMtMi4xNzItLjYzNS0yLjY4NC0xLjY1OGwtMS4xNy0yLjM0MmgtLjY0NmMtMS42NTQgMC0zLTEuMzQ2LTMtM3MxLjM0Ni0zIDMtM2gyLjVjLjY4MSAwIDEuMzIuMjI1IDEuODM0LjYyM2wxLjQ4Mi0yLjk2NGMuNDc4LS45NTQgMS40MzUtMS41ODcgMi40OTktMS42NTIgMS4wNTEtLjA3NiAyLjA4OS40NCAyLjY4MiAxLjMzMmwyLjc2OSA0LjE1NGMuMTQ5LS43NTYuMjM0LTEuNTM5LjIzNC0yLjM1MyAwLTMuMzg2LTIuNzU5LTYuMTQtNi4xNS02LjE0LTEuOTUzIDAtMy43MTcuODQ3LTQuODUgMi4yNzItMS4xMzMtMS40MjUtMi44OTctMi4yNzItNC44NS0yLjI3Mi0zLjM5MSAwLTYuMTUgMi43NTQtNi4xNSA2LjE0IDAgOS4xIDEwLjIxNyAxNC41NDcgMTAuNjUyIDE0Ljc3NC4xMDkuMDU4LjIyOS4wODYuMzQ4LjA4NnMuMjM5LS4wMjguMzQ4LS4wODVjLjI3Ny0uMTQ1IDQuNTIyLTIuNDExIDcuNTY4LTYuMzg3LS4zNTQtLjIyMy0uNjczLS41MDUtLjkxMi0uODY0eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPjwvZz48L3N2Zz4=" />
+                    </span>
+
+                    <!-- Header Title -->
+                    <span>
+                        <h1 id="title">BMI Calculator</h1>
+                    </span>
+                </div>
+                <div class="cred">
+                    Developed by Asit Sonawane
+                </div>
+            </div>
+
+            <!-- Main Panel Content -->
+
+            <div class="content-wrapper">
+                <div class="content-wrapper-header">
+                    <h2>What is BMI?</h2>
+                    <div>
+                        <p class="para">Body Mass Index (BMI) is a measure of body fat derived on the basis of an adult man or woman’s height and weight. BMI is a major determinant of one’s obesity or leanness. Moreover, BMI is a reliable and quick way of gauging the health of a person. It is a cost-effective and simple method of screening the categories of weight that may lead to medical problems in the near-future.</p>
+                    </div>
+                </div>
+                <div class="grid-container">
+                    <div class="column">
+                        <div class="align card cardBg">
+                          <h3 class="wHead">Weight</h3>
+                        <div class="cardSubtxt" id="wSubtxt"><p class="para">Select your weight in KG</p></div>
+                        <div>
+                            <input type="range" min="30" max="150" value="" class="weightSlider" id="weightInput"  onchange=bmi()>
+                            <p><span class="valOutput" id="weightVal" style="display: inline;">
+                            </span>kg</p>
+                        </div>
+                    </div>
+                      <div class="height-div card cardBg">
+                        <div class="heightLeft">
+                            <h3 class="hHead">Height</h3>
+                            <div class="heightLeft">
+                                <div class="cardSubtxt"><p class="para">Select your height in CM</p></div>
+                                    <p class="hpara"><span class="valOutput" id="heightVal" style="display: inline;">
+                                    </span>cm</p>
+                                </div>
+                            </div>
+                            <div class="heightRight">
+                                <input type="range" min="140" max="210" value="" class="heightSlider" id="heightInput"  onchange=bmi()>
+                            </div>
+                      </div>
+                    </div>
+                    <div class="rightCol column cardBg align">
+                      <div class="bmi card">
+                        <h3 class="wHead">BMI score</h3>
+                        <div id="bmioutput"></div>
+                        <div id="catoutput"></div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <script src="./script.js" async defer>// take weight and show it the text
+var weight = document.getElementById("weightInput");
+var woutput = document.getElementById("weightVal");
+woutput.innerHTML = weight.value;
+
+weight.oninput = function() {
+    woutput.innerHTML = this.value;
+}
+// take height and show it the text
+var height = document.getElementById("heightInput");
+var houtput = document.getElementById("heightVal");
+houtput.innerHTML = height.value;
+
+height.oninput = function() {
+    houtput.innerHTML = this.value;
+}
+
+function bmi(){
+    var weight = document.getElementById('weightInput').value,
+        cm = parseInt(document.getElementById('heightInput').value),
+        height = cm*0.01,
+        bmioutput = document.getElementById('bmioutput'),
+        formula = ~~(weight/(height*height)),
+        category = ''
+    if (formula <= 18.5){
+      category = 'Underweight'
+      // document.getElementById("app-card-bg").style.background = 'linear-gradient(to right,#e6b220, #664b00)'
+    } else if (18.5 <= formula && formula < 25){
+      category = 'Normal Weight'
+      // document.getElementById("app-card-bg").style.background = 'linear-gradient(to right,#22f2bb,#00664b)'
+    } else if (25 <= formula && formula < 30){
+      category = 'Overweight'
+      // document.getElementById("app-card-bg").style.background = 'linear-gradient(to right,#ed4f24,#701500)'
+    } else if (30 <= formula && formula < 75){
+      category = 'Obese'
+      // document.getElementById("app-card-bg").style.background = 'linear-gradient(to right,#ed213a,#66000d)'
+    }else if (formula >= 75){
+      category = 'GET HELP!'
+      // document.getElementById("app-card-bg").style.background = 'linear-gradient(to right,#ed213a,rgb(147, 41, 30))'
+    }
+    bmioutput.innerHTML = '<span>'+formula+'</span>'
+    catoutput.innerHTML = '<h2>'+category+'</h2>'
+  }
+  bmi()
+
+  </script>
+    </body>
+</html>
