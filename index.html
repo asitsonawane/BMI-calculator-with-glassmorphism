@@ -13,7 +13,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
         <link rel="stylesheet" href="./style.css">
-        <link rel="text/javascript" href="./script.js">
+        <script src="./script.js" async="" defer=""></script>
     </head>
     <body>
         <div class='cursor'></div>
@@ -83,51 +83,5 @@
                   </div>
             </div>
         </div>
-        <script src="./script.js" async defer>// take weight and show it the text
-var weight = document.getElementById("weightInput");
-var woutput = document.getElementById("weightVal");
-woutput.innerHTML = weight.value;
-
-weight.oninput = function() {
-    woutput.innerHTML = this.value;
-}
-// take height and show it the text
-var height = document.getElementById("heightInput");
-var houtput = document.getElementById("heightVal");
-houtput.innerHTML = height.value;
-
-height.oninput = function() {
-    houtput.innerHTML = this.value;
-}
-
-function bmi(){
-    var weight = document.getElementById('weightInput').value,
-        cm = parseInt(document.getElementById('heightInput').value),
-        height = cm*0.01,
-        bmioutput = document.getElementById('bmioutput'),
-        formula = ~~(weight/(height*height)),
-        category = ''
-    if (formula <= 18.5){
-      category = 'Underweight'
-      // document.getElementById("app-card-bg").style.background = 'linear-gradient(to right,#e6b220, #664b00)'
-    } else if (18.5 <= formula && formula < 25){
-      category = 'Normal Weight'
-      // document.getElementById("app-card-bg").style.background = 'linear-gradient(to right,#22f2bb,#00664b)'
-    } else if (25 <= formula && formula < 30){
-      category = 'Overweight'
-      // document.getElementById("app-card-bg").style.background = 'linear-gradient(to right,#ed4f24,#701500)'
-    } else if (30 <= formula && formula < 75){
-      category = 'Obese'
-      // document.getElementById("app-card-bg").style.background = 'linear-gradient(to right,#ed213a,#66000d)'
-    }else if (formula >= 75){
-      category = 'GET HELP!'
-      // document.getElementById("app-card-bg").style.background = 'linear-gradient(to right,#ed213a,rgb(147, 41, 30))'
-    }
-    bmioutput.innerHTML = '<span>'+formula+'</span>'
-    catoutput.innerHTML = '<h2>'+category+'</h2>'
-  }
-  bmi()
-
-  </script>
     </body>
 </html>
