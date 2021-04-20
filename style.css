@@ -78,8 +78,7 @@ body {
 /* -- BMI Icon -- */
 .bmi-icon{
     width: 50px;
-    padding-right: 15px;
-    animation: pulse 1s linear infinite;
+    height: 50px;
 }
 
 /* -- BMI Icon Pulse Animation -- */
