@@ -36,32 +36,6 @@ function bmi(){
   }
   bmi()
 
-  document.addEventListener('DOMContentLoaded', function(){
-
-	var cursor = document.createElement('div');
-	var cursorPoint = document.createElement('div');
-
-	cursor.classList.add('cursor');
-	cursorPoint.classList.add('cursor-point');
-
-	cursor.appendChild(cursorPoint);
-	document.body.appendChild(cursor);
-
-	var cursorPoint = document.querySelector('.cursor-point');
-
-	document.addEventListener('mousemove', function(e){
-		cursorPoint.setAttribute("style", "top: " + e.clientY + "px; left: " + e.clientX + "px");
-	});
-
-	document.addEventListener('click', function(e){
-		cursorPoint.classList.add("cursor-click");
-		setTimeout(function(){
-				cursorPoint.classList.remove("cursor-click");
-		}, 450);
-	});
-	
-});
-
 var before_loadtime = new Date().getTime();  
      window.onload = Pageloadtime;  
      function Pageloadtime() {  
