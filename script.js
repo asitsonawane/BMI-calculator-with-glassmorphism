@@ -43,6 +43,4 @@ var before_loadtime = new Date().getTime();
          pgloadtime = (aftr_loadtime - before_loadtime) / 1000
   
          document.getElementById("loadtime").innerHTML =pgloadtime ;
-     }   
-
-     document.body.style.cursor = 'none';
+     }  
